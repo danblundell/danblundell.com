@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    $PAGE-HEAD
+\*------------------------------------*/
+.page__header{
+    @extend .cf;
+    
+
+    position: relative;
+
+    margin-bottom: $base-spacing-unit*2;
+
+    &:before {
+        position: absolute;
+        top: $base-spacing-unit;
+        left: 0;
+        height: $base-spacing-unit;
+        width: $base-spacing-unit;
+
+        content: "";
+
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-left-color: rgb(200,200,200);
+
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(200,200,200);
+    }
+}
+
+
+/**
+ *
+ * Logo link back to the home page.
+ * 1. Remove the effects of nudging used on ‘normal’ sprites.
+ * 2. Make it look unclickable if you are currently on the home page.
+ */
+/*a*/.site-logo{
+    border-bottom: none;
+    float:left;
+
+    &:hover {
+        border-bottom: none;
+    }
+    
+    > img{
+        @extend .logo;
+        border-radius:$brand-round;
+        top:0; /* [1] */
+    }
+    
+    .page--home &{
+        cursor:default; /* [2] */
+    }
+}

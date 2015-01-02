@@ -1,0 +1,16 @@
+.marginalia{
+  font-style: italic;        
+  line-height: 1.5;
+}
+
+@media (min-width: $desk-start){
+
+    .marginalia__body,
+    .marginalia__body--right{
+        padding-bottom: .5em;
+        padding-top: .5em;
+
+        border-bottom: 1px solid rgb(230, 230, 230);
+        border-top: 1px solid rgb(230, 230, 230);
+    }
+}

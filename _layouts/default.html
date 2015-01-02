@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="page {{ page.page-class }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+
+    <!-- Prefetch DNS -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//platform.twitter.com">
+    <link rel="dns-prefetch" href="//use.typekit.net">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    
+    <title>{{ page.title }} | Dan Blundell</title>
+    
+    <link rel="stylesheet" href="/css/site.min.css">
+
+    <!-- feed link -->
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
+    <link rel=”author” href=”https://plus.google.com/u/0/+DanielBlundell/“/>
+    <link rel=”publisher” href=”https://plus.google.com/u/0/+DanielBlundell/“/>
+    <meta name="apple-mobile-web-app-title" content="Dan Blundell">
+    <meta name="description" content="{{ page.meta }}">
+    
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="danblundell">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.meta }}">
+    <meta name="twitter:creator" content="danblundell">
+    {% if page.image %}<meta name="twitter:image:src" content="{{ site.url }}/img/content/{{ page.image }}">{% endif %}
+    <meta name="twitter:domain" content="danblundell.com">
+
+    <!-- facebook meta tags -->
+    <meta name="og:title" content="{{ page.title }}">
+    <meta name="og:site_name" content="Dan Blundell">
+    <meta name="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="og:description" content="{% if page.type == "post" %}{{ post.meta }}{% else %}{{ page.meta }}{% endif %}">
+    {% if page.image %}<meta name="og:image" content="{{ site.url }}/img/content/{{ page.image }}">{% endif %}
+    <meta property="fb:admins" content="100003614636885" />
+    <meta name="fb:app_id" content="305226619652703">
+    <meta name="og:locale" content="en_GB">
+
+    <!-- ga -->
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-43692868-1', 'danblundell.com');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+    </script>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <header class="page__header">
+
+            <ul class="nav site-nav">
+                <li class="site-nav__home"><a href="/">Blog</a></li><!--
+             --><li class="site-nav__contact"><a href="/lets-talk/">Lets Talk</a></li>
+
+            </ul>
+
+        </header><!-- /.page-head -->
+
+    </div><!-- /.wrapper -->
+
+    <div class="wrapper">
+
+        <div class="gw">
+            
+
+            <div class="g  one-whole  desk-six-tenths">
+                {{ content }}
+            </div><!--
+         --><div class="g  one-whole  desk-one-tenth">
+                &nbsp;
+            </div><!--
+          --><div class="g  one-whole  desk-three-tenths">
+                <a href="{{ site.url }}" title="Home">
+                <figure class="pushed media__img--sidebar">
+                  <img src="/img/css/me.png" alt="Dan with his hands over his eyes">
+                </figure>
+                </a>
+                <p>Hi, I’m Dan and I am a developer, designer, drummer and snowboarder based in <a href="https://goo.gl/maps/1JhKY" target="_blank" title="Northampton - Google Maps">Northampton, UK.</a></p>
+                <p><a href="https://twitter.com/danblundell" class="twitter-follow-button" data-show-count="false">Follow @danblundell</a></p>
+
+            </div>
+            
+        </div>
+        
+    </div><!-- /wrapper -->
+
+    <footer class="page__footer"><div class="wrapper">
+    <div class="gw">
+      <div class="g one-whole desk-two-sixths">
+        <p>&copy; {{ site.time | date: '%Y' }} <a href="https://plus.google.com/u/0/+DanielBlundell?rel=author">Dan</a> <a href="http://twitter.com/danblundell">Blundell</a>.
+
+           Built on <a href="http://jekyllrb.com/">Jekyll 2.0</a>.</p>
+      </div><!-- 
+   --><div class="g one-whole desk-two-sixths">
+            <!-- TODO: graph -->
+      </div><!--
+  --><div class="g one-whole desk-two-sixths">
+          <!-- TODO: stat -->
+    </div>
+
+      </div>
+    </div></footer><!-- /wrapper /page-foot -->
+    <div id="fb-root"></div>
+  <!-- Typekit -->
+    <script type="text/javascript" src="//use.typekit.net/uas1phq.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <!-- follow-->
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+  <script type="text/javascript">
+    window.___gcfg = {lang: 'en-GB'};
+
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/platform.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=305226619652703&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
+</body>
+</html>

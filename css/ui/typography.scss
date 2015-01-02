@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Headings
+ */
+h1,h2,h3,h4,h5,h6{
+    font-family:  "adelle", Georgia, serif;
+    font-weight:300;
+    color:$brand-color;
+
+    line-height: normal;
+}
+dt{
+    font-weight:500;
+}
+
+
+/**
+ * Figures
+ */
+figure {
+    @media screen and (min-width: 1380px) {
+        margin-left: $base-spacing-unit*-8;
+    }
+
+    > img {
+        border-radius: $brand-round;
+    }
+
+    &.pushed {
+        @media screen and (min-width: 1380px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.media__img--sidebar {
+    @media screen and (min-width: 480px) and (max-width: $desk-start) {
+        float: left;
+        width: 33.33333%;
+
+        margin-right: $base-spacing-unit;
+        margin-left: -$base-spacing-unit;
+        padding-left: $base-spacing-unit;
+    }        
+}
+
+figcaption {
+    @include font-size(12px);
+    @media screen and (min-width: 1380px) {
+        margin-left: $base-spacing-unit*8;
+    }
+
+    &.pushed {
+        @media screen and (min-width: 1380px) {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+/**
+ * Inline elements
+ */
+b,strong,a{
+    font-weight:600;
+}
+mark{
+    background-color:#ff8;
+    color:inherit;
+}
+q{
+    font-style:italic;
+}
+
+
+/**
+ * Links
+ */
+a{
+    color:$brand-color;
+}
+
+
+/**
+ * Quotes
+ */
+blockquote{
+    @include font-size(24px);
+    color: #999;
+    font-style: italic;
+    text-indent: 0;
+
+    @media screen and (min-width: 680px) {
+        margin-left: $base-spacing-unit*-1;
+        padding-left: $base-spacing-unit;
+
+        > p {
+            position: relative;
+        }
+
+        > p:before {
+            position: absolute;
+            left: $base-spacing-unit*-1;
+            @include font-size($base-spacing-unit*2);
+        }
+
+        > p:last-of-type:after {
+            content: "";
+            content: no-close-quote;
+        }
+    }
+
+    @media screen and (min-width: 1140px) {
+
+        > p:before {
+            left: $base-spacing-unit*-2;
+            @include font-size($base-spacing-unit*3);
+        }
+
+    }
+}
+
+    .cite {
+        @include font-size(20px);
+        font-style: normal;
+    }
+
+
+/**
+ * Code
+ */
+pre{
+    white-space:pre;
+    word-wrap:normal;
+    background-color:#333;
+    overflow:auto;
+    color:#fff;
+    padding:$half-spacing-unit;
+    border-radius:$brand-round;
+
+    margin-left: -700px;
+    padding-left: 700px;
+}
+
+pre,code,kbd,samp{
+    font-family:Inconsolata, Monaco, Consolas, "Andale Mono",
+                "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    font-size: .8em;
+    line-height: 1.15em;
+}
+
+code,kbd,samp{
+    color: $brand-color--secondary;
+
+    pre &{
+        color:#fff;
+    }
+}
+
+.code-comment{
+    opacity:0.5;
+}
+
+
+/**
+ * Rules
+ */
+hr{
+    border-style:solid;
+    border-width:1px 0;
+    border-top-color:rgba(0, 0, 0, 0.075);
+    border-bottom-color:rgba(255, 255, 255, 0.75);
+}

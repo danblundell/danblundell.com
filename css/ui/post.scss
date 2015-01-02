@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    $POST
+\*------------------------------------*/
+.post{
+    > ul {
+        
+        margin-left: 1rem;
+
+        @include media-query(desk) {
+            margin-left: 0;
+        }
+    }   
+}
+
+.h__support {
+    display: block;
+    font-size: 0.83em;
+    margin-top: 0.17em;
+}
+
+
+
+

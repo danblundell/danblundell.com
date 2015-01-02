@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $POSTS
+\*------------------------------------*/
+.post-list{
+    @extend .block-list;
+
+    @media only screen and (min-width: $lap-start) {
+
+        margin-bottom: 0; 
+        > li {
+            border-left-width: 1px;
+            border-left-color: rgb(200,200,200);
+
+            .post__date {
+                margin-bottom: 0;
+            }
+
+            @media only screen and (min-width: $desk-start) {
+                padding-left: $base-spacing-unit*2;
+            }
+        }
+    }
+    
+}
+
+    .post__date{
+        display:block;
+        color: $brand-color--secondary;
+        margin-bottom: 1em;
+        @include font-size(16px);
+    }
+    .post__title{
+        margin-bottom:0;
+
+        > a{
+
+            font-weight:300;
+
+            &:hover,
+            &:active,
+            &:focus{
+                text-decoration:none;
+            }
+        }
+    }
+    .post__meta{
+        margin-bottom:0;
+        color:#999;
+    }
+
+    /*a*/.post__tag {
+        padding: 2px 5px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(200,200,200);
+        vertical-align: middle;
+
+        @include font-size(12px);
+
+        &:hover {
+            color: $brand-color--secondary;
+            border-color: $brand-color--secondary;
+        }
+    }
+

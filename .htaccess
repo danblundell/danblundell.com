@@ -1,0 +1,7 @@
+Redirect 301 /journal/2012-02-01-cleaner-perch-blog-urls http://danblundell.com
+Redirect 301 /journal/2012-01-28-new-adventures-2012 http://danblundell.com
+Redirect 301 /journal/2012-02-26-some-browsers-are-equal http://danblundell.com
+Redirect 301 /chrisblundell/index.php http://danblundell.com
+Redirect 301 /antony/?p=5 http://danblundell.com
+Redirect 301 /journal http://danblundell.com
+Redirect 301 /journal/ http://danblundell.com

@@ -1,0 +1,23 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Dan Blundell | LocalGov</title>
+    <link>{{ site.url }}/localgov</link>
+    <description>RSS feed for danblundell.com</description>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>{% assign filtered = site.posts | where:"localgov",true %}{% for post in filtered %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}{{ post.id }}</link>
+      <description>{{ post.meta }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <guid>{{ site.url }}{{ post.id }}</guid>
+    </item>{% endfor %}
+  </channel>
+</rss>

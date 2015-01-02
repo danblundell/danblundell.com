@@ -1,0 +1,31 @@
+---
+layout: default
+page-class: page--post
+---
+<article class="post">
+    
+    <h1 class="post__title">{{ page.title }}</h1>
+    <span class="post__date">{{ page.date | date: "%-d %B, %Y" }}</span>
+    {{ content }}
+</article>
+
+<p>Continue the conversation <a href="https://twitter.com/danblundell" class=""><strong>on Twitter</strong></a>, <a href="mailto:?subject=Hi, I've got some thoughts about {{ page.title }}">drop me an email</a> or share this post with someone else</p>
+
+<ul class="social-nav">
+    <li><a href="https://twitter.com/share" class="twitter-share-button" data-via="danblundell" data-related="danblundell" data-count="none">Tweet</a></li>
+    <li><div class="g-plusone" data-size="medium" data-annotation="none"></div></li>
+    <li><div class="fb-like" data-href="{{site.url}}{{page.url}}" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div></li>
+</ul>
+
+<ol class="nav  pagination">{% if page.previous.url %}<li class="pagination__prev">
+        
+            <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        
+    </li>{% endif %}<!--
+    
+ -->{% if page.next.url %}<li class="pagination__next">
+        
+            <a href="{{ page.next.url }}">{{page.next.title }}</a>
+        
+    </li>{% endif %}
+</ol>

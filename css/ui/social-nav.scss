@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $SOCIAL
+\*------------------------------------*/
+/**
+ * Extends `.nav`.
+ * 1. Make the nav’s text one line high
+ */
+.social-nav{
+    @extend .nav;
+
+    > li{
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+}

@@ -1,0 +1,54 @@
+.pagination {
+	text-align: left;
+}
+    .pagination > li{
+    	float: left;
+    	width: 50%;
+
+        color: #c2c2c2;
+        padding: 0;
+        text-align:center;
+
+        &.pagination__next {
+        	float: right;
+        }
+    }
+        .pagination > li > a{
+        	position: relative;
+        	display: block;
+            margin: 0;
+            padding: $half-spacing-unit 0;
+            &:hover {
+            	border-bottom: none;
+            	&:after {
+            		width: 100%;
+            		border-color: $brand-color;
+            	}
+            }
+        } 
+
+        .pagination > li > a:after {
+        	@include vendor(transition, .2s ease-in-out);
+        }   
+
+        .pagination__prev > a:after {
+        	content: ' ';
+        	border-left: 1px solid rgb(200,200,200);
+        	border-bottom: 1px solid rgb(200,200,200);
+        	width: 1em;
+        	height: 1em;
+        	bottom: 0;
+        	left: 0;
+        	position: absolute;
+        }
+
+        .pagination__next > a:after {
+        	content: ' ';
+        	border-right: 1px solid rgb(200,200,200);
+        	border-top: 1px solid rgb(200,200,200);
+        	width: 1em;
+        	height: 1em;
+        	top: 0;
+        	right: 0;
+        	position: absolute;
+        }

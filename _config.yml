@@ -1,0 +1,22 @@
+url: http://danblundell.com
+author: Dan Blundell
+name: danblundell.com
+rss_name: feed.xml
+markdown: redcarpet
+highlighter: pygments
+permalink: /:year/:month/:title
+paginate: 8
+paginate_path: ":num"
+sass:
+    style: :compressed
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/localgov/feed.xml"
+    include_posts:
+        - "/index.html"
+        - "/localgov/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
